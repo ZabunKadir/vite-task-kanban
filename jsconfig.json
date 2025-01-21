@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // Projenin kök dizini
+    "paths": {
+      "@/*": ["src/*"] // '@' işaretini 'src/' klasörüne yönlendirir
+    }
+  },
+  "include": ["src"] // 'src' klasörünü kapsar
+}
