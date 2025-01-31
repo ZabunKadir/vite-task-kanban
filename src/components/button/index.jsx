@@ -1,19 +1,28 @@
+import { Button } from "@/components/ui/button";
 import classNames from "classnames";
-import React from "react";
 
-const Button = ({ onClick, children, disabled }) => {
+export function ButtonComp({
+  type,
+  buttonClass,
+  disabled,
+  loading,
+  children,
+  onClick,
+  ...props
+}) {
   return (
-    <button
-      disabled={disabled}
+    <Button
+      {...props}
       onClick={onClick}
+      disabled={disabled}
       className={classNames(
-        "bg-red-400 py-2 px-4 rounded",
-        disabled ? "bg-gray-500" : ""
+        "min-h-[40px] h-[40px] min-w-max text-white hover:cursor-pointer",
+        disabled && "opacity-50 !cursor-not-allowed",
+        loading && "opacity-75 !cursor-not-allowed",
+        buttonClass
       )}
     >
-      {children}
-    </button>
+      {children ?? "Button"}
+    </Button>
   );
-};
-
-export default Button;
+}

@@ -4,7 +4,7 @@ import React from "react";
 
 const PublicLayout = ({ children }) => {
   return (
-    <main>
+    <main className="min-h-screen w-full overflow-y-auto">
       <Header />
       {children}
       <Footer />
