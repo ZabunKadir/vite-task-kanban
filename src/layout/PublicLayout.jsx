@@ -5,7 +5,7 @@ const PublicLayout = ({ children }) => {
   return (
     <main className="min-h-screen flex flex-col">
       <Header />
-      <div className="flex-grow">{children}</div>
+      {children}
       <Footer />
     </main>
   );
