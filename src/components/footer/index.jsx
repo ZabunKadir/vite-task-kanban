@@ -1,4 +1,23 @@
-import Link from "@/components/link";
+import CustomLink from "../link";
+
+const links = [
+  {
+    title: "Privacy policy",
+    link: "#",
+  },
+  {
+    title: "Your Privacy Choices",
+    link: "#",
+  },
+  {
+    title: "Terms",
+    link: "#",
+  },
+  {
+    title: "Impressum",
+    link: "#",
+  },
+];
 const Footer = () => {
   return (
     <footer className="footer-container   py-6 ">
@@ -7,12 +26,15 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-left font-bold">Copyright © 2025 Atlassian</div>
 
-          {/* EREN Linkleri */}
+          {/* Links */}
           <div className="footer-links flex flex-col gap-2 md:flex-row md:gap-6">
-            <Link href="#">Privacy policy</Link>
-            <Link href="#">Your Privacy Choices</Link>
-            <Link href="#">Terms</Link>
-            <Link href="#">Impressum</Link>
+            {links.map((item, index) => {
+              return (
+                <CustomLink key={index} to={item.link}>
+                  {item.title}
+                </CustomLink>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -1,14 +1,21 @@
-const LinkComp = ({ children, href, rel, target }) => {
+import classNames from "classnames";
+import { Link } from "react-router-dom";
+
+const CustomLink = ({ children, href, rel, target, ...props }) => {
   return (
-    <a
+    <Link
+      {...props}
       href={href}
       target={target}
       ref={rel}
-      className=" font-medium hover:underline hover:text-gray-400"
+      className={classNames(
+        " font-medium hover:underline transition-color duration-300 hover:text-gray-400",
+        props.className
+      )}
     >
       {children}
-    </a>
+    </Link>
   );
 };
 
-export default LinkComp;
+export default CustomLink;

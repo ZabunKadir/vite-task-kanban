@@ -4,7 +4,7 @@ import React from "react";
 const HomePage = () => {
   return (
     <PublicLayout>
-      <section className="w-full"></section>
+      <section className="min-h-[calc(100vh-105px)]">Home Page</section>
     </PublicLayout>
   );
 };

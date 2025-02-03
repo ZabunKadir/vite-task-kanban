@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import classNames from "classnames";
 
-export function ButtonComp({
-  type,
+export function CustomButton({
+  type = "button",
   buttonClass,
   disabled,
   loading,
@@ -13,7 +13,7 @@ export function ButtonComp({
 }) {
   return (
     <Button
-      {...props}
+      type={type}
       onClick={onClick}
       disabled={disabled}
       className={classNames(
@@ -22,6 +22,7 @@ export function ButtonComp({
         loading && "opacity-75 !cursor-not-allowed",
         buttonClass
       )}
+      {...props}
     >
       {children ?? "Button"}
     </Button>
