@@ -1,12 +1,11 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import React from "react";
 
 const PublicLayout = ({ children }) => {
   return (
-    <main className="min-h-screen w-full overflow-y-auto">
+    <main className="min-h-screen flex flex-col">
       <Header />
-      {children}
+      <div className="flex-grow">{children}</div>
       <Footer />
     </main>
   );
