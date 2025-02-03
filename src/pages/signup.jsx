@@ -1,7 +1,7 @@
 import PublicLayout from "@/layout/PublicLayout";
 
-const LoginPage = () => {
+const SignupPage = () => {
   return <PublicLayout>Login</PublicLayout>;
 };
 
-export default LoginPage;
+export default SignupPage;

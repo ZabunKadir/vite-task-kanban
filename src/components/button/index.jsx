@@ -8,6 +8,7 @@ export function ButtonComp({
   loading,
   children,
   onClick,
+  variant,
   ...props
 }) {
   return (
@@ -16,7 +17,7 @@ export function ButtonComp({
       onClick={onClick}
       disabled={disabled}
       className={classNames(
-        "min-h-[40px] h-[40px] min-w-max text-white hover:cursor-pointer",
+        "min-h-[40px] h-[40px] min-w-max text-white bg-primary-main hover:cursor-pointer",
         disabled && "opacity-50 !cursor-not-allowed",
         loading && "opacity-75 !cursor-not-allowed",
         buttonClass
