@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { forgotPasswordValidationSchema } from "@/validation/forgotPasswordValidation";
-import { CustomButton } from "../button";
+import { forgotPasswordValidationSchema } from "@/validations/forgotPasswordValidation";
+import { CustomButton } from "@/components/button";
+
 const initialValues = {
   email: "",
 };
