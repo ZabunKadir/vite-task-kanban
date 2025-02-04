@@ -2,6 +2,8 @@ import MobileMenu from "./mobilmenu"; // Mobil menü componentini import edin
 import Logo from "../logo";
 import CustomLink from "../link";
 import { CustomButton } from "../button";
+import { FaBeer } from "react-icons/fa";
+
 const navLinks = [
   {
     title: "About",
@@ -35,7 +37,13 @@ const Header = () => {
             <CustomButton>Sign Up</CustomButton>
           </CustomLink>
           <CustomLink to="/login">
-            <CustomButton>Sign In</CustomButton>
+            <CustomButton
+              buttonClass={
+                "text-primary-main bg-white shadow-none border border-transparent hover:border hover:border-primary-main"
+              }
+            >
+              Sign In
+            </CustomButton>
           </CustomLink>
         </div>
 

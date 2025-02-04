@@ -1,5 +1,6 @@
+import ForgotPasswordForm from "@/features/auth/forgotPasswordForm";
 import PublicLayout from "@/layout/PublicLayout";
-import ForgotPasswordForm from "@/components/forms/ForgotPasswordForm";
+
 const ForgotPasswordPage = () => {
   const handleSubmit = (values, { setSubmitting }) => {
     console.log("E-posta ile şifre sıfırlama linki gönderildi:", values.email);
