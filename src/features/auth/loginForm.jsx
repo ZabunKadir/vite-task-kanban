@@ -1,9 +1,9 @@
 import { useFormik } from "formik";
 import { loginValidationSchema } from "@/validations/loginValidation"; // Validation şemanız
-import { CustomButton } from "@/components/button";
-import CustomLink from "@/components/link";
-import Checkbox from "@/components/checkbox"; 
-import InputField from "@/components/ınputfied.jsx";
+import InputField from "@/components/common/input";
+import Checkbox from "@/components/common/checkbox";
+import CustomButton from "@/components/common/button";
+import CustomLink from "@/components/common/customLink";
 
 const LoginForm = () => {
   const formik = useFormik({
@@ -35,15 +35,17 @@ const LoginForm = () => {
         label="Email/Username"
         type="text"
         name="email"
-        formik={formik}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
       />
       <InputField
         label="Password"
         type="password"
         name="password"
-        formik={formik}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
       />
-      
+
       <Checkbox
         label="Remember me"
         name="rememberEmail"

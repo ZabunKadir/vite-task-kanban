@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { forgotPasswordValidationSchema } from "@/validations/forgotPasswordValidation";
-import { CustomButton } from "@/components/button";
+import CustomButton from "@/components/common/button";
 
 const initialValues = {
   email: "",
@@ -16,7 +16,7 @@ const ForgotPasswordForm = ({ onSubmit }) => {
         <Form className="flex flex-col gap-4 w-full max-w-sm mx-auto">
           <div>
             <label htmlFor="email" className="block text-sm font-medium">
-             Email Address
+              Email Address
             </label>
             <Field
               type="email"

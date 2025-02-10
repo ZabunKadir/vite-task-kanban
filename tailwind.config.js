@@ -4,7 +4,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      darkmode:"class",
+      darkmode: "class",
       screens: {
         xxs: "360px", // Küçük telefonlar (iPhone SE, eski Android telefonlar)
         xs: "480px", // Küçük telefonlar (daha büyük ekranlı Android & iPhone Mini)
@@ -20,7 +20,16 @@ export default {
       },
       colors: {
         "primary-main": "#2A7F62",
+        "primary-mid": "#2A7F62",
+        "primary-light": "#2A7F62",
         "secondary-main": "#5E239D",
+        "secondary-mid": "#5E239D",
+        "secondary-light": "#5E239D",
+        error: "#ff2c2c",
+        "error-light": "#FA5053",
+        success: "#50C878",
+        "success-light": "#5be187",
+        info: "#ffe800",
         gray: {
           900: "#111827",
           800: "#1f2937",
