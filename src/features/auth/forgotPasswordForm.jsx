@@ -16,12 +16,12 @@ const ForgotPasswordForm = ({ onSubmit }) => {
         <Form className="flex flex-col gap-4 w-full max-w-sm mx-auto">
           <div>
             <label htmlFor="email" className="block text-sm font-medium">
-              E-posta Adresi
+             Email Address
             </label>
             <Field
               type="email"
               name="email"
-              placeholder="E-posta adresinizi girin"
+              placeholder="Enter your email address"
               className="w-full border rounded-md p-2 mt-1  focus:ring-black"
             />
             <ErrorMessage
@@ -32,7 +32,7 @@ const ForgotPasswordForm = ({ onSubmit }) => {
           </div>
 
           <CustomButton type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "E-posta Gönderiliyor..." : "Şifreyi Sıfırla"}
+            {isSubmitting ? "Sending Email..." : "Reset Password"}
           </CustomButton>
         </Form>
       )}
