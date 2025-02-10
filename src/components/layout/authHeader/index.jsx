@@ -1,20 +1,27 @@
 import React, { useState } from "react";
-import { FaUserCircle, FaCog, FaQuestionCircle, FaTag, FaTh,FaSearch  } from "react-icons/fa";
-import { CustomButton } from "../button";
+import {
+  FaUserCircle,
+  FaCog,
+  FaQuestionCircle,
+  FaTag,
+  FaTh,
+  FaSearch,
+} from "react-icons/fa";
+import { CustomButton } from "../../common/button";
 import { MdOutlineDiamond } from "react-icons/md";
 
 const menuItems = [
-  { text: "Çalışmalarınız", href: "#" },
-  { text: "Projeler", href: "#" },
-  { text: "Filtreler", href: "#" },
-  { text: "Gösterge Panoları", href: "#" },
-  { text: "Takımlar", href: "#" },
-  { text: "Planlar", href: "#" },
-  { text: "Uygulamalar", href: "#" },
+  { text: "Çalışmalarınız", to: "#" },
+  { text: "Projeler", to: "#" },
+  { text: "Filtreler", to: "#" },
+  { text: "Gösterge Panoları", to: "#" },
+  { text: "Takımlar", to: "#" },
+  { text: "Planlar", to: "#" },
+  { text: "Uygulamalar", to: "#" },
 ];
 
 const UserHeader = () => {
-  const [activeMenu, setActiveMenu] = useState("Projeler"); 
+  const [activeMenu, setActiveMenu] = useState("Projeler");
   return (
     <header className="flex items-center justify-between text-black px-4 py-2">
       <div className="flex items-center space-x-4">
@@ -32,8 +39,7 @@ const UserHeader = () => {
               {item.text}
             </CustomButton>
           ))}
-                  <CustomButton >Oluştur</CustomButton>
-                         
+          <CustomButton>Oluştur</CustomButton>
         </nav>
       </div>
       <div className="flex items-center space-x-4">
@@ -41,7 +47,7 @@ const UserHeader = () => {
           <MdOutlineDiamond size={20} />
           <span>30 gün kaldı</span>
         </div>
-         <div className="relative">
+        <div className="relative">
           <FaSearch className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500" />
           <input
             type="text"

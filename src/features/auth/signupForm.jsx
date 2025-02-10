@@ -1,10 +1,9 @@
 import { useFormik } from "formik";
 import { signupValidationSchema } from "@/validations/signupValidation";
-import { CustomButton } from "@/components/button";
 import { useSignUpMutation } from "@/stores/auth/authEndpoints";
-import CustomLink from "@/components/link";
-import InputField from "@/components/ınputfied.jsx";
-
+import CustomLink from "@/components/common/customLink";
+import InputField from "@/components/common/input";
+import CustomButton from "@/components/common/button";
 
 const SignupForm = () => {
   const [signUp, { isLoading }] = useSignUpMutation();
@@ -24,6 +23,7 @@ const SignupForm = () => {
       });
     },
   });
+  console.log(isLoading, !formik.dirty);
 
   return (
     <form
@@ -34,23 +34,26 @@ const SignupForm = () => {
         label="Email"
         name="email"
         type="email"
-        formik={formik}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
       />
       <InputField
         label="Password"
         name="password"
         type="password"
-        formik={formik}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
       />
       <InputField
         label="Password Repeat"
         name="confirmPassword"
         type="password"
-        formik={formik}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
       />
 
       <CustomButton
-        onClick={() => formik.submitForm()}
+        type="submit"
         disabled={!formik.dirty || isLoading}
         loading={isLoading}
       >

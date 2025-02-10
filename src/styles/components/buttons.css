@@ -1,0 +1,5 @@
+@layer components {
+  .btn {
+    @apply min-h-[40px] h-[40px] min-w-max text-white bg-primary-main hover:cursor-pointer hover:bg-primary-mid rounded-md;
+  }
+}
