@@ -2,17 +2,17 @@ import * as Yup from "yup";
 
 export const loginValidationSchema = Yup.object().shape({
   email: Yup.string()
-    .email("Geçerli bir e-posta adresi giriniz")
-    .matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Geçerli bir e-posta adresi giriniz")
-    .max(50, "E-posta 50 karakteri geçmemelidir")
-    .required("E-posta zorunludur"),
+    .email("Please enter a valid email address")
+    .matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Please enter a valid email address")
+    .max(50, "Email must not exceed 50 characters")
+    .required("Email is required"),
 
   password: Yup.string()
-    .min(8, "Şifre en az 8 karakter olmalıdır")
-    .max(20, "Şifre en fazla 20 karakter olmalıdır")
+    .min(8, "Password must be at least 8 characters long")
+    .max(20, "Password must not exceed 20 characters")
     .matches(
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-      "Şifre en az bir büyük harf, bir küçük harf, bir rakam ve bir özel karakter içermelidir"
+      "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character"
     )
-    .required("Şifre zorunludur"),
+    .required("Password is required"),
 });

@@ -4,6 +4,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      darkmode:"class",
       screens: {
         xxs: "360px", // Küçük telefonlar (iPhone SE, eski Android telefonlar)
         xs: "480px", // Küçük telefonlar (daha büyük ekranlı Android & iPhone Mini)
