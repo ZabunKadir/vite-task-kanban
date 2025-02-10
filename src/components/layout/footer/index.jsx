@@ -1,4 +1,4 @@
-import CustomLink from "../link";
+import CustomLink from "@/components/common/customLink";
 
 const links = [
   {
