@@ -58,7 +58,7 @@ const LoginForm = () => {
 
       <div className="flex flex-col justify-center">
         <CustomLink to="/reset-password">I Forgot My Password</CustomLink>
-        <CustomLink to="/signup">Don't have an account? Sign Up</CustomLink>
+        <CustomLink to="/signup">Dont have an account? Sign Up</CustomLink>
       </div>
     </form>
   );
