@@ -6,12 +6,12 @@ import Logo from "../logo";
 
 const navLinks = [
   { title: "About", link: "#" },
-  { title: "Solutions", link: "#" },
+  { title: "Solutions", link: "/solutions" },
 ];
 
 const Header = () => {
   return (
-    <header className="w-full flex border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 md:px-20 py-6 transition-colors duration-300">
+    <header className="w-full flex border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 md:px-20 py-6 transition-colors">
       <div className="flex items-center justify-between w-full">
         <div className="flex-shrink-0">
           <Logo width={90} height={60} />
