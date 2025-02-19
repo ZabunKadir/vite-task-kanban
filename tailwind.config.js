@@ -3,48 +3,70 @@ export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {
-      darkmode: "class",
-      screens: {
-        xxs: "360px", // Küçük telefonlar (iPhone SE, eski Android telefonlar)
-        xs: "480px", // Küçük telefonlar (daha büyük ekranlı Android & iPhone Mini)
-        sm: "640px", // Küçük tabletler & büyük telefonlar
-        md: "768px", // Tabletler (iPad, Galaxy Tab)
-        lg: "1024px", // Küçük dizüstü bilgisayarlar
-        xl: "1280px", // Büyük ekranlar
-        "2xl": "1536px", // Ultra geniş ekranlar
-        "3xl": "1800px", // 2K çözünürlüğe sahip monitörler
-        "4xl": "2100px", // Geniş 2K ekranlar
-        "5xl": "2560px", // 4K ekranlar
-        "6xl": "3200px", // Geniş ultra-wide ekranlar
-      },
-      colors: {
-        "primary-main": "#2A7F62",
-        "primary-mid": "#2A7F62",
-        "primary-light": "#2A7F62",
-        "secondary-main": "#5E239D",
-        "secondary-mid": "#5E239D",
-        "secondary-light": "#5E239D",
-        error: "#ff2c2c",
-        "error-light": "#FA5053",
-        success: "#50C878",
-        "success-light": "#5be187",
-        info: "#ffe800",
-        gray: {
-          900: "#111827",
-          800: "#1f2937",
-          700: "#374151",
-          600: "#4b5563",
-          500: "#6b7280",
-          400: "#9ca3af",
-          300: "#d1d5db",
-          200: "#e5e7eb",
-          100: "#f3f4f6",
-          50: "#f9fafb",
-          25: "#fcfcfd",
-        },
-      },
-    },
+  	extend: {
+  		darkmode: 'class',
+  		screens: {
+  			xxs: '360px',
+  			xs: '480px',
+  			sm: '640px',
+  			md: '768px',
+  			lg: '1024px',
+  			xl: '1280px',
+  			'2xl': '1536px',
+  			'3xl': '1800px',
+  			'4xl': '2100px',
+  			'5xl': '2560px',
+  			'6xl': '3200px'
+  		},
+  		colors: {
+  			'primary-main': '#2A7F62',
+  			'primary-mid': '#2A7F62',
+  			'primary-light': '#2A7F62',
+  			'secondary-main': '#5E239D',
+  			'secondary-mid': '#5E239D',
+  			'secondary-light': '#5E239D',
+  			error: '#ff2c2c',
+  			'error-light': '#FA5053',
+  			success: '#50C878',
+  			'success-light': '#5be187',
+  			info: '#ffe800',
+  			gray: {
+  				'25': '#fcfcfd',
+  				'50': '#f9fafb',
+  				'100': '#f3f4f6',
+  				'200': '#e5e7eb',
+  				'300': '#d1d5db',
+  				'400': '#9ca3af',
+  				'500': '#6b7280',
+  				'600': '#4b5563',
+  				'700': '#374151',
+  				'800': '#1f2937',
+  				'900': '#111827'
+  			}
+  		},
+  		keyframes: {
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
+  		}
+  	}
   },
   plugins: [require("tailwindcss-animate")],
 };

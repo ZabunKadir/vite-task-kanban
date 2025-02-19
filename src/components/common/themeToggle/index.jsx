@@ -1,24 +1,28 @@
 import { useContext } from "react";
 import { ThemeContext } from "@/context/themeContext";
-
 import { FaMoon } from "react-icons/fa";
 import { IoMdSunny } from "react-icons/io";
-import CustomButton from "../button";
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <CustomButton
+    <div
       onClick={toggleTheme}
-      className="bg-gray-200 dark:bg-gray-700 w-[36px] h-[36px] p-2 rounded-full transition-all duration-300"
+      className="relative w-14 h-8 rounded-full bg-gray-200 dark:bg-gray-700 cursor-pointer transition-all duration-300"
     >
-      {theme === "dark" ? (
-        <FaMoon className="text-yellow-400 text-xl" />
-      ) : (
-        <IoMdSunny className="text-gray-900 dark:text-gray-100 text-xl" />
-      )}
-    </CustomButton>
+      <div
+        className={`absolute top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white dark:bg-gray-900 flex items-center justify-center transition-all duration-300 ${
+          theme === "dark" ? "translate-x-7" : "translate-x-1"
+        }`}
+      >
+        {theme === "dark" ? (
+          <FaMoon className="text-yellow-400 text-base" />
+        ) : (
+          <IoMdSunny className="text-orange-400 text-base" />
+        )}
+      </div>
+    </div>
   );
 };
 

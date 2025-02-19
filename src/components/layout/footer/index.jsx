@@ -20,7 +20,7 @@ const links = [
 ];
 const Footer = () => {
   return (
-    <footer className="footer-container   py-6 ">
+    <footer className="footer-container   border-t-2  py-6 ">
       <div className="container mx-auto px-4 md:px-8 lg:px-16 xl:px-44">
         <div className="footer-content flex flex-col items-start justify-between gap-4 md:flex-row md:items-center md:gap-0">
           {/* Copyright */}
