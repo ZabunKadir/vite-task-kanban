@@ -24,6 +24,7 @@ const WarningModal = ({
       >
         <button
           onClick={onClose}
+          type="button"
           className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
         >
           <MdClose className="w-5 h-5" />
@@ -36,6 +37,7 @@ const WarningModal = ({
           <p className="text-gray-600 dark:text-gray-300 mt-2">{description}</p>
           {buttonText && (
             <button
+              type="button"
               onClick={onButtonClick}
               className="mt-4 px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600"
             >
