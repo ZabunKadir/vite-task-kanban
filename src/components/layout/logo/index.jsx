@@ -1,6 +1,6 @@
 // components/Logo.js
 
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const Logo = ({ width = 150, height = 150 }) => {
   return (
