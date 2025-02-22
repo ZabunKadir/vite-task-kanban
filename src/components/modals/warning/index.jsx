@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { MdWarning, MdClose } from "react-icons/md";
 import { cn } from "@/lib/utils";
+
 const WarningModal = ({
   isOpen,
   onClose,
@@ -10,10 +12,24 @@ const WarningModal = ({
   buttonText,
   onButtonClick,
 }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
+
   const icons = {
     warning: <MdWarning className="w-10 h-10 text-yellow-500" />,
   };
+
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50">
       <div
@@ -22,6 +38,7 @@ const WarningModal = ({
           color === "yellow" && "border-yellow-500"
         )}
       >
+        {/* Kapatma butonu */}
         <button
           onClick={onClose}
           type="button"
@@ -37,8 +54,8 @@ const WarningModal = ({
           <p className="text-gray-600 dark:text-gray-300 mt-2">{description}</p>
           {buttonText && (
             <button
-              type="button"
               onClick={onButtonClick}
+              type="button"
               className="mt-4 px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600"
             >
               {buttonText}
