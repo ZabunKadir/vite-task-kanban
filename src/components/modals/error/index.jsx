@@ -1,3 +1,4 @@
+import {  useEffect } from "react";
 import { MdError, MdClose } from "react-icons/md";
 import { cn } from "@/lib/utils";
 
@@ -11,10 +12,27 @@ const ErrorModal = ({
   buttonText,
   onButtonClick,
 }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
   if (!isOpen) return null;
+
   const icons = {
     error: <MdError className="w-10 h-10 text-red-500" />,
   };
+
+  const handleClose = () => {
+    onClose();
+  };
+
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50">
       <div
@@ -25,7 +43,7 @@ const ErrorModal = ({
       >
         <button
           type="button"
-          onClick={onClose}
+          onClick={handleClose}
           className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
         >
           <MdClose className="w-5 h-5" />
@@ -39,7 +57,10 @@ const ErrorModal = ({
           {buttonText && (
             <button
               type="button"
-              onClick={onButtonClick}
+              onClick={() => {
+                onButtonClick();
+                handleClose();
+              }}
               className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
             >
               {buttonText}
