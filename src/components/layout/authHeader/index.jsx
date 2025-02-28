@@ -1,3 +1,4 @@
+import CustomButton from "@/components/common/button";
 import React, { useState } from "react";
 import {
   FaUserCircle,
@@ -7,7 +8,6 @@ import {
   FaTh,
   FaSearch,
 } from "react-icons/fa";
-import { CustomButton } from "../../common/button";
 import { MdOutlineDiamond } from "react-icons/md";
 
 const menuItems = [
@@ -20,7 +20,7 @@ const menuItems = [
   { text: "Uygulamalar", to: "#" },
 ];
 
-const UserHeader = () => {
+const AuthHeader = () => {
   const [activeMenu, setActiveMenu] = useState("Projeler");
   return (
     <header className="flex items-center justify-between text-black dark:text-white px-4 py-2 bg-white dark:bg-gray-900">
@@ -31,6 +31,7 @@ const UserHeader = () => {
           {menuItems.map((item, index) => (
             <CustomButton
               key={index}
+              type="button"
               onClick={() => setActiveMenu(item.text)}
               className={`hover:bg-gray-300 dark:hover:bg-gray-700 ${
                 activeMenu === item.text
@@ -41,7 +42,6 @@ const UserHeader = () => {
               {item.text}
             </CustomButton>
           ))}
-          <CustomButton>Oluştur</CustomButton>
         </nav>
       </div>
       <div className="flex items-center space-x-4">
@@ -66,4 +66,4 @@ const UserHeader = () => {
   );
 };
 
-export default UserHeader;
+export default AuthHeader;

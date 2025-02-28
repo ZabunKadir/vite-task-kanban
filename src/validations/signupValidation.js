@@ -1,15 +1,23 @@
 import * as Yup from "yup";
 
 export const signupValidationSchema = Yup.object().shape({
-  firstName: Yup.string()
-    .matches(/^[a-zA-ZğüşöçıİĞÜŞÖÇ\s]+$/, "First name should only contain letters")
+  name: Yup.string()
+    .matches(
+      /^[a-zA-ZğüşöçıİĞÜŞÖÇ\s]+$/,
+      "First name should only contain letters"
+    )
     .min(2, "First name must be at least 2 characters long")
-    .max(30, "First name must not exceed 30 characters"),
+    .max(30, "First name must not exceed 30 characters")
+    .required("Name is required"),
 
-  lastName: Yup.string()
-    .matches(/^[a-zA-ZğüşöçıİĞÜŞÖÇ\s]+$/, "Last name should only contain letters")
+  surname: Yup.string()
+    .matches(
+      /^[a-zA-ZğüşöçıİĞÜŞÖÇ\s]+$/,
+      "Last name should only contain letters"
+    )
     .min(2, "Last name must be at least 2 characters long")
-    .max(30, "Last name must not exceed 30 characters"),
+    .max(30, "Last name must not exceed 30 characters")
+    .required("Surname is required"),
 
   email: Yup.string()
     .email("Please enter a valid email address")

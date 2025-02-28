@@ -5,6 +5,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../../firebase";
 import { api } from "../api";
+import { buildResponse } from "@/utils";
 
 export const tasksApi = api.injectEndpoints({
   endpoints: (builder) => ({
@@ -16,9 +17,9 @@ export const tasksApi = api.injectEndpoints({
             email,
             password
           );
-          return { data: userCredential.user };
+          return buildResponse(userCredential.user, "Login successfully");
         } catch (error) {
-          return { error: { message: error.message, status: error.code } };
+          return buildResponse(undefined, error.message, error.code);
         }
       },
     }),
@@ -37,9 +38,9 @@ export const tasksApi = api.injectEndpoints({
             accessToken: user.accessToken,
           });
           const plainUser = extractUserData(userCredential.user);
-          return { data: plainUser };
+          return buildResponse(plainUser, "User created successfully");
         } catch (error) {
-          return { error: { message: error.message, status: error.code } };
+          return buildResponse(undefined, error.message, error.code);
         }
       },
     }),
