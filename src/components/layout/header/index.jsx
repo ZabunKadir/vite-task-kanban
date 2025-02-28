@@ -3,6 +3,7 @@ import CustomLink from "@/components/common/customLink";
 import CustomButton from "@/components/common/button";
 import ThemeToggle from "@/components/common/themeToggle";
 import Logo from "../logo";
+import { GoItalic } from "react-icons/go";
 
 const navLinks = [
   { title: "About", link: "#" },
@@ -28,16 +29,22 @@ const Header = () => {
           ))}
         </div>
         <div className="hidden md:flex space-x-4 items-center">
-          <CustomLink
-            to="/signup"
-            className="btn px-4 hover:no-underline hover:text-white hover:bg-primary-main/90 shadow"
-          >
-            Sign Up
-          </CustomLink>
+          <div className="flex justify-center items-center space-x-2 min-w-max">
+            <CustomLink
+              to="/login"
+              className="border border-transparent hover:border-gray-400 p-2 rounded-md min-h-[36px] !h-[36px] hover:text-primary-light"
+            >
+              Sign In
+            </CustomLink>
+            <span className="text-[32px] leading-none mb-2">|</span>
 
-          <CustomButton className="text-primary-main bg-white border border-transparent hover:border-primary-main dark:bg-gray-700 dark:text-gray-200 dark:border-gray-500">
-            <CustomLink to="/login">Sign In</CustomLink>
-          </CustomButton>
+            <CustomLink
+              to="/signup"
+              className="btn px-4 min-h-[36px] !h-[36px] hover:no-underline hover:text-white hover:bg-primary-main/90 shadow"
+            >
+              Sign Up
+            </CustomLink>
+          </div>
 
           <div className="space-x-5">
             <ThemeToggle />

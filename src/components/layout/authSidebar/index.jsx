@@ -11,7 +11,7 @@ import {
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import { GoChevronDown, GoChevronRight } from "react-icons/go";
 
-const Sidebar = () => {
+const AuthSidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [planningOpen, setPlanningOpen] = useState(false);
   const [developmentOpen, setDevelopmentOpen] = useState(false);
@@ -32,8 +32,12 @@ const Sidebar = () => {
                 className="rounded-full w-6 h-6"
               />
               <div className="flex flex-col">
-                <h2 className="text-sm font-bold text-gray-900 dark:text-white">Kanban Projem</h2>
-                <span className="text-xs text-gray-400 dark:text-gray-500">Yazılım projesi</span>
+                <h2 className="text-sm font-bold text-gray-900 dark:text-white">
+                  Kanban Projem
+                </h2>
+                <span className="text-xs text-gray-400 dark:text-gray-500">
+                  Yazılım projesi
+                </span>
               </div>
             </div>
 
@@ -131,4 +135,4 @@ const SidebarItem = ({ icon, text, active, badge }) => (
   </div>
 );
 
-export default Sidebar;
+export default AuthSidebar;
