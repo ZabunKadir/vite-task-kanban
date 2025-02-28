@@ -18,5 +18,16 @@ body {
 @tailwind components;
 @tailwind utilities;
 
-@layer base {}
+ @layer base {}
+/*
 
+
+@layer base {
+  * {
+    @apply  border-2 outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+ */
