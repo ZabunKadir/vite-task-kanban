@@ -3,12 +3,12 @@ import classNames from "classnames";
 
 const CustomButton = ({
   type = "button",
-  buttonClass,
+  buttonClass = "",
   disabled,
   loading,
   children,
   onClick,
-  variant = "default", // Varsayılan olarak normal buton
+  variant = "default",
   ...props
 }) => {
   return (
@@ -17,18 +17,17 @@ const CustomButton = ({
       onClick={onClick}
       disabled={disabled || loading}
       className={classNames(
-        "px-4 py-2 rounded-lg transition duration-300",
-        "flex items-center justify-center gap-2",
+        "px-4 py-2 transition duration-300 flex items-center justify-center gap-2",
         disabled && "opacity-50 !cursor-not-allowed",
         loading && "opacity-75 !cursor-not-allowed",
         {
-          "bg-red-600 text-white hover:bg-red-700": variant === "error",
-          "bg-green-600 text-white hover:bg-green-700": variant === "success",
-          "bg-yellow-500 text-white hover:bg-yellow-600": variant === "warning",
-          "bg-blue-600 text-white hover:bg-blue-700": variant === "info",
-          "bg-gray-600 text-white hover:bg-gray-700": variant === "default",
+          "bg-error text-white hover:error-light": variant === "error",
+          "bg-success text-white  hover:bg-success-light": variant === "success",
+          "bg-warning text-white hover:bg-warning-light": variant === "warning",
+          "bg-info text-white hover:bg-info-light": variant === "info",
+          "bg-primary-main text-white hover:primary-light": variant === "default",
         },
-        buttonClass
+        buttonClass // Kullanıcının eklediği ekstra sınıflar burada ekleniyor
       )}
       {...props}
     >
