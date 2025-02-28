@@ -38,11 +38,12 @@ const InputField = ({
         value={value}
         className={classNames(
           "w-full border border-gray-300 dark:border-gray-600 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-main dark:bg-gray-800 dark:text-white",
+          error && "!border-error focus:!ring-0",
           inputClass
         )}
         {...props}
       />
-      {error && <span className="text-red-500 text-sm">{error}</span>}
+      {error && <span className="text-red-500 text-sm ">{error}</span>}
     </div>
   );
 };
