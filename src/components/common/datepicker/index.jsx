@@ -21,7 +21,7 @@ const CustomDatePicker = ({
   const handleChange = (newDate) => {
     setDate(newDate);
     if (onChange) {
-      onChange(newDate);  // Kullanıcı değişiklik yaptığında dışarıya bildir
+      onChange(newDate); 
     }
   };
 
