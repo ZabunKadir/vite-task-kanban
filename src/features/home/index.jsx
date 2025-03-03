@@ -7,10 +7,8 @@ const HomeModule = () => {
 
   return (
     <section className="min-h-[calc(100vh-105px)] ">
-    
     <HeroSection/>
     <ServicesList/>
-
     </section>
   );
 };

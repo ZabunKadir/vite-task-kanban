@@ -56,8 +56,8 @@ const ServicesList = () => {
               setSelectedImage(feature.image);
             }}
           >
-            <div>{feature.icon}</div>
-            <h3 className="font-bold mt-4">{feature.title}</h3>
+            <div className='dark:text-primary-main'>{feature.icon}</div>
+            <h3 className="font-bold mt-4 dark:text-gray-600">{feature.title}</h3>
             <p className="text-gray-500 mt-2">{feature.description}</p>
           </div>
         ))}
