@@ -1,5 +1,4 @@
 import CustomButton from "@/components/common/button";
-import CustomImg from "@/components/common/image";
 
 const HeroSection = () => {
     return (
@@ -21,13 +20,15 @@ const HeroSection = () => {
             PLATFORMU KEŞFEDİN
           </CustomButton>
         </div>
+  
+        {/* Görseli alta hizalamak için absolute positioning eklendi */}
         <div className="mt-10 w-full px-4 md:px-16 flex justify-center items-center">
-          <div className="w-full max-w-5xl">        
-             <CustomImg 
+          <div className="w-full max-w-5xl">
+            <img
               src="https://teamboard.cloud/wp-content/uploads/2024/04/full-hierarchy-basic-2334x1202-v08.10.22-1024x527.png"
               alt="AI collaboration"
-              loading="loading"
-              />
+              className="w-full h-1/3 object-cover"
+            />
           </div>
         </div>
       </div>

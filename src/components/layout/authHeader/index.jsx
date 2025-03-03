@@ -50,7 +50,7 @@ const UserItems = [
   },
 ];
 
-const UserHeader = () => {
+const AuthHeader = () => {
   const [activeMenu, setActiveMenu] = useState("Projeler");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -66,6 +66,7 @@ const UserHeader = () => {
           {menuItems.map((item, index) => (
             <CustomButton
               key={index}
+              type="button"
               onClick={() => setActiveMenu(item.text)}
               className={`hover:bg-gray-300 dark:hover:bg-gray-700 ${
                 activeMenu === item.text
@@ -76,7 +77,6 @@ const UserHeader = () => {
               {item.text}
             </CustomButton>
           ))}
-          <CustomButton>Oluştur</CustomButton>
         </nav>
         {/* Menu for smaller screens (responsive dropdown inside a box) */}
         <div className="md:hidden relative">
@@ -131,4 +131,4 @@ const UserHeader = () => {
   );
 };
 
-export default UserHeader;
+export default AuthHeader;
