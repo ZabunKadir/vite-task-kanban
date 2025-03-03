@@ -4,8 +4,8 @@ import ServicesList from "@/features/home/services";
 const HomeModule = () => {
   return (
     <section className="min-h-[calc(100vh-105px)] ">
-      <HeroSection />
-      <ServicesList />
+    <HeroSection/>
+    <ServicesList/>
     </section>
   );
 };
