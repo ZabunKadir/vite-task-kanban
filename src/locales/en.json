@@ -1,0 +1,35 @@
+
+  {
+    "hero_section": {
+      "title": "Project Management Powered by Artificial Intelligence",
+      "description": "Increase your team's productivity and manage your projects smoothly. Accelerate the process with AI-powered workflows, automation, and agile management tools.",
+      "button_text": "Explore the Platform"
+      
+    },
+        "services_list": {
+          "title": "Professional Project Management Tools",
+          "subtitle": "Speed Up Your Workflow",
+          "description": "Combine powerful automation with intuitive tools to increase your team's productivity and your project's success.",
+          "features": [
+            {
+              "title": "Issue Management",
+              "description": "Bring project issues together on a single platform. Easily manage tasks, bugs, and improvement requests."
+            },
+            {
+              "title": "Smart Workflows",
+              "description": "Increase your team's efficiency. Optimize your workflows with automation and smart synchronization."
+            },
+            {
+              "title": "Agile Boards",
+              "description": "Manage your projects with agile boards. Easily organize tasks with drag-and-drop functionality."
+            },
+            {
+              "title": "AI-Powered Analysis",
+              "description": "Analyze your project data with AI. Predict bottlenecks and improve your team's performance."
+            }
+          ]
+        }
+      }
+      
+  
+  
