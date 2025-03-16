@@ -1,0 +1,33 @@
+{
+    "hero_section": {
+      "title": "Proje Yönetimi Yapay Zeka ile Güçleniyor",
+      "description": "Ekibinizin üretkenliğini artırın ve projelerinizi sorunsuz yönetin. Yapay zeka destekli iş akışları, otomasyon ve çevik yönetim araçlarıyla süreci hızlandırın.",
+      "button_text": "PLATFORMU KEŞFEDİN"
+    },
+    
+        "services_list": {
+          "title": "Profesyonel Proje Yönetim Araçları",
+          "subtitle": "İş Akışınızı Hızlandırın",
+          "description": "Güçlü otomasyon ve sezgisel araçları birleştirerek, ekibinizin verimliliğini ve projelerinizin başarısını artırın.",
+          "features": [
+            {
+              "title": "Sorun Yönetimi",
+              "description": "Projeler arası sorunları tek bir platformda toplayın. Görev, hata ve iyileştirme isteklerinizi kolayca yönetin."
+            },
+            {
+              "title": "Akıllı İş Akışları",
+              "description": "Takımınızın verimliliğini artırın. Otomasyon ve akıllı senkronizasyon ile iş akışlarınızı optimize edin."
+            },
+            {
+              "title": "Çevik Panolar",
+              "description": "Projelerinizi çevik panolarla yönetin. Sürükle-bırak özelliği sayesinde görevlerinizi kolayca düzenleyin."
+            },
+            {
+              "title": "Yapay Zeka Destekli Analiz",
+              "description": "Yapay zeka ile proje verilerinizi analiz edin. Tıkanıklıkları öngörün ve ekip performansınızı artırın."
+            }
+          ]
+        }
+      
+      
+  }

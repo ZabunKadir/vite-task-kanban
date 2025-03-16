@@ -1,18 +1,18 @@
+import { useTranslation } from "react-i18next";  // useTranslation ekle
 import CustomButton from "@/components/common/button";
 
 const HeroSection = () => {
+  const { t } = useTranslation();  // useTranslation hook'u ile çevirileri al
+
   return (
     <div className="flex flex-col items-center justify-center text-center px-6 md:px-20 dark:bg-deepCyan relative">
       <div className="max-w-3xl space-y-8 mt-20">
         <h1 className="text-4xl md:text-7xl font-bold text-primary-main dark:text-primary-light font-calsans">
-          Proje Yönetimi <br />
-          Yapay Zeka ile Güçleniyor
+          {t("hero_section.title")}  {/* Çeviriyi buraya ekle */}
         </h1>
 
         <p className="text-lg text-gray-700 dark:text-gray-200 mt-4">
-          Ekibinizin üretkenliğini artırın ve projelerinizi sorunsuz yönetin.
-          Yapay zeka destekli iş akışları, otomasyon ve çevik yönetim
-          araçlarıyla süreci hızlandırın.
+          {t("hero_section.description")}  {/* Açıklama metnini burada çevir */}
         </p>
 
         <CustomButton
@@ -20,7 +20,7 @@ const HeroSection = () => {
           variant="primary"
           className="px-4 py-2 bg-primary-mid hover:bg-primary-light text-white rounded-full font-medium mb-4"
         >
-          PLATFORMU KEŞFEDİN
+          {t("hero_section.button_text")}  {/* Buton metnini burada çevir */}
         </CustomButton>
       </div>
 
