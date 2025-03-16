@@ -8,13 +8,12 @@ import { Menu } from "lucide-react";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import CustomLink from "@/components/common/customLink";
 import CustomButton from "@/components/common/button";
-import ThemeToggle from "@/components/common/themeToggle";
+
 
 const MobileMenu = ({ links }) => {
   return (
     <Sheet>
-      {/* Dark mode */}
-      <ThemeToggle />
+  
       <SheetTrigger className="md:hidden p-2">
         <Menu className="h-6 w-6 text-gray-900 dark:text-gray-100" />
       </SheetTrigger>
